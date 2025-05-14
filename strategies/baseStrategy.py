@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class wifiAuditor(ABC):
+class wifiStrategy(ABC):
     @abstractmethod
     def getWifiPassword(self):
         pass
