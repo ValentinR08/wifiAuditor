@@ -1,5 +1,5 @@
-from .facade import wifiAuditor
+from facade import wifiAuditor
 
 if __name__ == '__main__':
     auditor = wifiAuditor()
-    auditor.runAuditor()
+    auditor.runAuditor(export=True)

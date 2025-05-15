@@ -16,9 +16,9 @@ class netshStrategy(wifiStrategy):
                     encoding='utf-8', errors='ignore'
                 )
                 password_match = re.search(r"Contenido de la clave\s*:\s(.*)", result)
-                password = password_match.group(1).strip() if password_match else "No encontrada"
+                password = password_match.group(1).strip() if password_match else "No founded"
                 results.append({'SSID': name, 'Password': password})
             except subprocess.CalledProcessError:
-                results.append({'SSID': name, 'Password': 'Error al obtener'})
+                results.append({'SSID': name, 'Password': 'Error to get password'})
         
         return results
